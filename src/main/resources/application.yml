@@ -1,26 +1,22 @@
-spring: 
+spring:
   datasource:
-     url: jdbc: h2: mem:vehiclesdb
-     driver-class-name: org.h2.Driver
-     username: sa
-     password:
-
+    url: jdbc:h2:mem:vehiclesdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
   jpa:
-    database-platform: ord.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-       ddl-auto: none
+      ddl-auto: none
     show-sql: true
     properties:
-      hibernate: 
-         format_sql: true
-
-
-  sql: 
+      hibernate:
+        format_sql: true
+  sql:
     init:
-    mode: always
-    schema-locations: classpath:schema.sql
-    data-locations: classpath:data.sql
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
 
-server: 
+server:
   port: 8080
-
